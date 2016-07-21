@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Ian Dennis Miller" />
+  <title>QMS Manual</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link href="data:text/css;charset=utf-8,%0A%0A%0A%0Adiv%23header%2C%20header%0A%7B%0A%0Aborder%2Dbottom%3A%201px%20solid%20%23aaa%3B%0Amargin%2Dbottom%3A%200%2E5em%3B%0A%7D%0A%2Etitle%20%0A%7B%0Atext%2Dalign%3A%20center%3B%0A%7D%0A%2Eauthor%2C%20%2Edate%20%0A%7B%0Atext%2Dalign%3A%20center%3B%0A%7D%0A%0Adiv%23TOC%2C%20nav%23TOC%0A%7B%0A%0Aborder%2Dbottom%3A%201px%20solid%20%23aaa%3B%0Amargin%2Dbottom%3A%200%2E5em%3B%0A%7D%0A%40media%20print%0A%7B%0Adiv%23TOC%2C%20nav%23TOC%0A%7B%0A%0Adisplay%3A%20none%3B%0A%7D%0A%7D%0A%0Ah1%2C%20h2%2C%20h3%2C%20h4%2C%20h5%2C%20h6%0A%7B%0Afont%2Dfamily%3A%20%22Helvetica%20Neue%22%2C%20Helvetica%2C%20%22Liberation%20Sans%22%2C%20Calibri%2C%20Arial%2C%20sans%2Dserif%3B%20%0A%0Apage%2Dbreak%2Dafter%3A%20avoid%3B%20%0A%7D%0A%0Adiv%20div%2C%20section%20section%20%0A%7B%0Amargin%2Dleft%3A%202em%3B%20%0A%7D%0Ap%20%7B%7D%0Ablockquote%0A%7B%0Afont%2Dstyle%3A%20italic%3B%0A%7D%0Ali%20%0A%7B%0A%7D%0Ali%20%3E%20p%20%0A%7B%0Amargin%2Dtop%3A%201em%3B%20%0A%7D%0Aul%20%0A%7B%0A%7D%0Aul%20li%20%0A%7B%0A%7D%0Aol%20%0A%7B%0A%7D%0Aol%20li%20%0A%7B%0A%7D%0Ahr%20%7B%7D%0A%0Asub%20%0A%7B%0A%7D%0Asup%20%0A%7B%0A%7D%0Aem%20%0A%7B%0A%7D%0Aem%20%3E%20em%20%0A%7B%0Afont%2Dstyle%3A%20normal%3B%0A%7D%0Astrong%20%0A%7B%0A%7D%0A%0Aa%20%0A%7B%0A%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0A%40media%20screen%0A%7B%0Aa%3Ahover%0A%7B%0A%0Atext%2Ddecoration%3A%20underline%3B%0A%7D%0A%7D%0A%40media%20print%0A%7B%0Aa%20%7B%0A%0Acolor%3A%20black%3B%0Abackground%3A%20transparent%3B%0A%7D%0Aa%5Bhref%5E%3D%22http%3A%2F%2F%22%5D%3Aafter%2C%20a%5Bhref%5E%3D%22https%3A%2F%2F%22%5D%3Aafter%0A%7B%0A%0Acontent%3A%20%22%20%28%22%20attr%28href%29%20%22%29%20%22%3B%0Afont%2Dsize%3A%2090%25%3B%0A%7D%0A%7D%0A%0Aimg%0A%7B%0A%0Avertical%2Dalign%3A%20middle%3B%0A%7D%0Adiv%2Efigure%20%0A%7B%0A%0Amargin%2Dleft%3A%20auto%3B%0Amargin%2Dright%3A%20auto%3B%0Atext%2Dalign%3A%20center%3B%0Afont%2Dstyle%3A%20italic%3B%0A%7D%0Ap%2Ecaption%20%0A%7B%0A%0A%7D%0A%0Apre%2C%20code%0A%7B%0Abackground%2Dcolor%3A%20%23fdf7ee%3B%0A%0A%0A%0Awhite%2Dspace%3A%20pre%2Dwrap%3B%20%0Awhite%2Dspace%3A%20%2Dmoz%2Dpre%2Dwrap%20%21important%3B%20%0Awhite%2Dspace%3A%20%2Dpre%2Dwrap%3B%20%0Awhite%2Dspace%3A%20%2Do%2Dpre%2Dwrap%3B%20%0Aword%2Dwrap%3A%20break%2Dword%3B%20%0A%0A%7D%0Apre%20%0A%7B%0A%0Apadding%3A%200%2E5em%3B%20%0Aborder%2Dradius%3A%205px%3B%20%0A%0Aborder%3A%201px%20solid%20%23aaa%3B%0A%0Amargin%2Dleft%3A%200%2E5em%3B%0Amargin%2Dright%3A%200%2E5em%3B%0A%7D%0A%40media%20screen%0A%7B%0Apre%0A%7B%0A%0Awhite%2Dspace%3A%20pre%3B%0Aoverflow%3A%20auto%3B%0A%0Aborder%3A%201px%20dotted%20%23777%3B%0A%7D%0A%7D%0Acode%20%0A%7B%0A%7D%0Ap%20%3E%20code%2C%20li%20%3E%20code%20%0A%7B%0A%0Apadding%2Dleft%3A%202px%3B%0Apadding%2Dright%3A%202px%3B%0A%7D%0Ali%20%3E%20p%20code%20%0A%7B%0A%0Apadding%3A%202px%3B%0A%7D%0A%0Aspan%2Emath%20%0A%7B%0A%0A%7D%0Adiv%2Emath%20%0A%7B%0A%7D%0Aspan%2ELaTeX%20%0A%7B%0A%7D%0Aeq%20%0A%7B%0A%7D%0A%0A%0Atable%0A%7B%0Aborder%2Dcollapse%3A%20collapse%3B%0Aborder%2Dspacing%3A%200%3B%20%0Aborder%2Dbottom%3A%202pt%20solid%20%23000%3B%0Aborder%2Dtop%3A%202pt%20solid%20%23000%3B%20%0A%0Amargin%2Dleft%3A%20auto%3B%0Amargin%2Dright%3A%20auto%3B%0A%7D%0Athead%20%0A%7B%0Aborder%2Dbottom%3A%201pt%20solid%20%23000%3B%0Abackground%2Dcolor%3A%20%23eee%3B%20%0A%7D%0Atr%2Eheader%20%0A%7B%0A%7D%0Atbody%20%0A%7B%0A%7D%0A%0Atr%20%7B%0A%7D%0Atr%2Eodd%3Ahover%2C%20tr%2Eeven%3Ahover%20%0A%7B%0Abackground%2Dcolor%3A%20%23eee%3B%0A%7D%0A%0Atr%2Eodd%20%7B%7D%0Atr%2Eeven%20%7B%7D%0Atd%2C%20th%20%0A%7B%0Avertical%2Dalign%3A%20top%3B%20%0Avertical%2Dalign%3A%20baseline%3B%20%0Apadding%2Dleft%3A%200%2E5em%3B%0Apadding%2Dright%3A%200%2E5em%3B%0Apadding%2Dtop%3A%200%2E2em%3B%0Apadding%2Dbottom%3A%200%2E2em%3B%0A%7D%0A%0A%0Ath%20%0A%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Atfoot%20%0A%7B%0A%7D%0Acaption%20%0A%7B%0Acaption%2Dside%3A%20top%3B%0Aborder%3A%20none%3B%0Afont%2Dsize%3A%200%2E9em%3B%0Afont%2Dstyle%3A%20italic%3B%0Atext%2Dalign%3A%20center%3B%0Amargin%2Dbottom%3A%200%2E3em%3B%20%0Apadding%2Dbottom%3A%200%2E2em%3B%0A%7D%0A%0Adl%20%0A%7B%0Aborder%2Dtop%3A%202pt%20solid%20black%3B%0Apadding%2Dtop%3A%200%2E5em%3B%0Aborder%2Dbottom%3A%202pt%20solid%20black%3B%0A%7D%0Adt%20%0A%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Add%2Bdt%20%0A%7B%0Aborder%2Dtop%3A%201pt%20solid%20black%3B%0Apadding%2Dtop%3A%200%2E5em%3B%0A%7D%0Add%20%0A%7B%0Amargin%2Dbottom%3A%200%2E5em%3B%0A%7D%0Add%2Bdd%20%0A%7B%0Aborder%2Dtop%3A%201px%20solid%20black%3B%20%0A%7D%0A%0Aa%2Efootnote%2C%20a%2EfootnoteRef%20%7B%20%0Afont%2Dsize%3A%20small%3B%0Avertical%2Dalign%3A%20text%2Dtop%3B%0A%7D%0Aa%5Bhref%5E%3D%22%23fnref%22%5D%2C%20a%2Ereversefootnote%20%0A%7B%0A%7D%0A%40media%20print%0A%7B%0Aa%5Bhref%5E%3D%22%23fnref%22%5D%2C%20a%2Ereversefootnote%20%0A%7B%0A%0Adisplay%3A%20none%3B%0A%7D%0A%7D%0Adiv%2Efootnotes%20%0A%7B%0A%7D%0Adiv%2Efootnotes%20li%5Bid%5E%3D%22fn%22%5D%20%0A%7B%0A%7D%0A%0A%40media%20print%0A%7B%0A%2Enoprint%0A%7B%0Adisplay%3Anone%3B%0A%7D%0A%7D%0A" rel="stylesheet" type="text/css" />
+  <link href="data:text/css;charset=utf-8,body%20%7B%0Afont%2Dfamily%3A%20helvetica%3B%0Awidth%3A%2040em%3B%0Amargin%3A%200%20auto%3B%0A%7D%0Aimg%20%7B%0Amax%2Dwidth%3A%2040em%3B%0A%7D%0A" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="header">
+<h1 class="title">QMS Manual</h1>
+<h2 class="author">Ian Dennis Miller</h2>
+<h3 class="date">Today</h3>
+</div>
+<div id="TOC">
+
+<p><a href="../pubgem_Project_Guide.html">⬅ Back to pubgem Project Guide</a></p>
+
+<ul>
+<li><a href="#scope">1. Scope</a><ul>
+<li><a href="#description-of-organization">1.1 Description of Organization</a></li>
+<li><a href="#scope-of-certification">1.2 Scope of Certification</a></li>
+<li><a href="#third-party-certification">1.3 Third Party Certification</a></li>
+</ul></li>
+<li><a href="#references">2. References</a></li>
+<li><a href="#terms-definitions">3. Terms &amp; Definitions</a><ul>
+<li><a href="#description">3.1 Description</a></li>
+<li><a href="#implementation-and-maintenance">3.2 Implementation And Maintenance</a></li>
+</ul></li>
+<li><a href="#quality-management-system">4. Quality Management System</a><ul>
+<li><a href="#general-requirements">4.1 General Requirements</a></li>
+<li><a href="#documentation-requirements">4.2 Documentation Requirements</a><ul>
+<li><a href="#general">4.2.1 General</a></li>
+<li><a href="#quality-management-system-manual">4.2.2 Quality Management System Manual</a></li>
+<li><a href="#document-and-data-control">4.2.3 Document and Data Control</a></li>
+<li><a href="#control-of-records">4.2.4 Control of Records</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#management-responsibility">5. Management Responsibility</a><ul>
+<li><a href="#management-commitment">5.1 Management Commitment</a></li>
+<li><a href="#customer-focus">5.2 Customer Focus</a></li>
+<li><a href="#policy-statement">5.3 Policy Statement</a></li>
+<li><a href="#planning">5.4 Planning</a><ul>
+<li><a href="#quality-objectives">5.4.1 Quality Objectives</a></li>
+<li><a href="#quality-management-system-planning">5.4.2 Quality Management System Planning</a></li>
+</ul></li>
+<li><a href="#responsibility-authority-and-communication">5.5 Responsibility, Authority And Communication</a><ul>
+<li><a href="#responsibility-and-authority">5.5.1 Responsibility And Authority</a></li>
+<li><a href="#management-representative">5.5.2 Management Representative</a></li>
+<li><a href="#communication-participation">5.5.3 Communication &amp; Participation</a></li>
+</ul></li>
+<li><a href="#management-review">5.6 Management Review</a><ul>
+<li><a href="#general-1">5.6.1 General</a></li>
+<li><a href="#review-input">5.6.2 Review Input</a></li>
+<li><a href="#review-output">5.6.3 Review Output</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#resource-management">6. Resource Management</a><ul>
+<li><a href="#provision-of-resources">6.1 Provision Of Resources</a></li>
+<li><a href="#human-resources">6.2 Human Resources</a><ul>
+<li><a href="#general-2">6.2.1 General</a></li>
+<li><a href="#competence-awareness-training">6.2.2 Competence, Awareness &amp; Training</a></li>
+</ul></li>
+<li><a href="#infrastructure">6.3 Infrastructure</a></li>
+<li><a href="#work-environment">6.4 Work Environment</a></li>
+</ul></li>
+<li><a href="#product-realization">7. Product Realization</a><ul>
+<li><a href="#product-realization-planning">7.1 Product Realization Planning</a></li>
+<li><a href="#customer-related-processes">7.2 Customer Related Processes</a><ul>
+<li><a href="#determination-of-requirements-related-to-product">7.2.1 Determination Of Requirements Related To Product</a></li>
+<li><a href="#review-of-requirements-related-to-product">7.2.2 Review Of Requirements Related To Product</a></li>
+<li><a href="#customer-communication">7.2.3 Customer Communication</a></li>
+</ul></li>
+<li><a href="#design-development">7.3 Design &amp; Development</a><ul>
+<li><a href="#planning-1">7.3.1 Planning</a></li>
+<li><a href="#input">7.3.2 Input</a></li>
+<li><a href="#output">7.3.3 Output</a></li>
+<li><a href="#review">7.3.4 Review</a></li>
+<li><a href="#verification">7.3.5 Verification</a></li>
+<li><a href="#validation">7.3.6 Validation</a></li>
+<li><a href="#control-of-design-development-changes">7.3.7 Control Of Design &amp; Development Changes</a></li>
+</ul></li>
+<li><a href="#purchasing">7.4 Purchasing</a><ul>
+<li><a href="#purchasing-process">7.4.1 Purchasing Process</a></li>
+<li><a href="#purchasing-information">7.4.2 Purchasing Information</a></li>
+<li><a href="#verification-of-purchased-product">7.4.3 Verification Of Purchased Product</a></li>
+</ul></li>
+<li><a href="#production-service-provision">7.5 Production &amp; Service Provision</a><ul>
+<li><a href="#control-of-production-service-provision">7.5.1 Control Of Production &amp; Service Provision</a></li>
+<li><a href="#validation-of-processes-for-production-service-provision">7.5.2 Validation Of Processes For Production &amp; Service Provision</a></li>
+<li><a href="#identification-traceability">7.5.3 Identification &amp; Traceability</a></li>
+<li><a href="#customer-property">7.5.4 Customer Property</a></li>
+<li><a href="#preservation-of-product">7.5.5 Preservation Of Product</a></li>
+</ul></li>
+<li><a href="#control-of-monitoring-measuring-equipment.">7.6 Control Of Monitoring &amp; Measuring Equipment.</a></li>
+</ul></li>
+<li><a href="#measurement-analysis-improvement">8. Measurement, Analysis &amp; Improvement</a><ul>
+<li><a href="#general-3">8.1 General</a></li>
+<li><a href="#monitoring-measurement">8.2 Monitoring &amp; Measurement</a><ul>
+<li><a href="#customer-satisfaction">8.2.1 Customer Satisfaction</a></li>
+<li><a href="#internal-audit">8.2.2 Internal Audit</a></li>
+<li><a href="#process-monitoring-measurement">8.2.3 Process Monitoring &amp; Measurement</a></li>
+<li><a href="#product-monitoring-measurement">8.2.4 Product Monitoring &amp; Measurement</a></li>
+</ul></li>
+<li><a href="#control-of-non-conformances">8.3 Control Of Non-conformances</a></li>
+<li><a href="#analysis-of-data">8.4 Analysis Of Data</a></li>
+<li><a href="#improvement">8.5 Improvement</a><ul>
+<li><a href="#continual-improvement">8.5.1 Continual Improvement</a></li>
+<li><a href="#corrective-action">8.5.2 Corrective Action</a></li>
+<li><a href="#preventive-action">8.5.3 Preventive Action</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#appendices">Appendices</a><ul>
+<li><a href="#a.1-abbreviations-acronyms">A.1 Abbreviations &amp; Acronyms</a></li>
+<li><a href="#a.2-sequence-interaction-of-qms-processes">A.2 Sequence &amp; Interaction Of QMS Processes</a></li>
+<li><a href="#a.3-relationships-between-iso-standards">A.3 Relationships between ISO standards</a></li>
+<li><a href="#a.4-list-of-key-management-system-documents">A.4 List Of Key Management System Documents</a><ul>
+<li><a href="#operational-procedures">Operational Procedures</a></li>
+<li><a href="#forms-records">Forms &amp; Records</a></li>
+</ul></li>
+<li><a href="#a.5-organization-chart">A.5 Organization Chart</a></li>
+</ul></li>
+</ul>
+</div>
+
+<p>This QMS manual describes a quality management system that conforms to the standards stated by ISO 9001:2008.</p>
+<h1 id="scope">1. Scope</h1>
+<h2 id="description-of-organization">1.1 Description of Organization</h2>
+<p>This organization is an agglomeration of open sources software contributors. The project is open source in nature.</p>
+<h2 id="scope-of-certification">1.2 Scope of Certification</h2>
+<p>This document is set up for ISO 9001:2008 certification. However, these headings will roughly generalize to other ISO QMS certifications, such as ISO 13485.</p>
+<h2 id="third-party-certification">1.3 Third Party Certification</h2>
+<p>The certifying institution must be chosen based upon jurisdiction.</p>
+<h1 id="references">2. References</h1>
+<ul>
+<li><a href="../iso/AAMI%20TIR45-2012.pdf">AAMI TIR45-2012</a></li>
+<li><a href="../iso/ISO%209001-2008.pdf">ISO 9001-2008</a></li>
+<li><a href="../iso/ISO%209004-2009.pdf">ISO 9004-2009</a></li>
+<li><a href="../iso/ISO%2013485-2003.pdf">ISO 13485-2003</a></li>
+<li><a href="../iso/ISO%2014971-2012.pdf">ISO 14971-2012</a></li>
+<li><a href="../iso/ISO%2020000-1-2005.pdf">ISO 20000-1-2005</a></li>
+<li><a href="../iso/ISO%2062304-2006.pdf">ISO 62304-2006</a></li>
+<li><a href="../iso/ISO%2090003-2004.pdf">ISO 90003-2004</a></li>
+</ul>
+<h1 id="terms-definitions">3. Terms &amp; Definitions</h1>
+<h2 id="description">3.1 Description</h2>
+<h2 id="implementation-and-maintenance">3.2 Implementation And Maintenance</h2>
+<h1 id="quality-management-system">4. Quality Management System</h1>
+<h2 id="general-requirements">4.1 General Requirements</h2>
+<h2 id="documentation-requirements">4.2 Documentation Requirements</h2>
+<h3 id="general">4.2.1 General</h3>
+<h3 id="quality-management-system-manual">4.2.2 Quality Management System Manual</h3>
+<h3 id="document-and-data-control">4.2.3 Document and Data Control</h3>
+<p>All project and planning materials will be stored in a directory structure containing the documentation in a variety of formats. The directory structure will be version controlled.</p>
+<h3 id="control-of-records">4.2.4 Control of Records</h3>
+<p>Project records are referred to under the Compliance heading of the Project Guide. These records contain a history documenting this project's quality assurance activities.</p>
+<h1 id="management-responsibility">5. Management Responsibility</h1>
+<h2 id="management-commitment">5.1 Management Commitment</h2>
+<h2 id="customer-focus">5.2 Customer Focus</h2>
+<h2 id="policy-statement">5.3 Policy Statement</h2>
+<p>This project seeks to deliver defect-free results.</p>
+<h2 id="planning">5.4 Planning</h2>
+<h3 id="quality-objectives">5.4.1 Quality Objectives</h3>
+<p>The project processes should deliver new features while reducing defects over time.</p>
+<h3 id="quality-management-system-planning">5.4.2 Quality Management System Planning</h3>
+<h2 id="responsibility-authority-and-communication">5.5 Responsibility, Authority And Communication</h2>
+<h3 id="responsibility-and-authority">5.5.1 Responsibility And Authority</h3>
+<h3 id="management-representative">5.5.2 Management Representative</h3>
+<h3 id="communication-participation">5.5.3 Communication &amp; Participation</h3>
+<h2 id="management-review">5.6 Management Review</h2>
+<h3 id="general-1">5.6.1 General</h3>
+<h3 id="review-input">5.6.2 Review Input</h3>
+<h3 id="review-output">5.6.3 Review Output</h3>
+<h1 id="resource-management">6. Resource Management</h1>
+<h2 id="provision-of-resources">6.1 Provision Of Resources</h2>
+<h2 id="human-resources">6.2 Human Resources</h2>
+<h3 id="general-2">6.2.1 General</h3>
+<h3 id="competence-awareness-training">6.2.2 Competence, Awareness &amp; Training</h3>
+<h2 id="infrastructure">6.3 Infrastructure</h2>
+<h2 id="work-environment">6.4 Work Environment</h2>
+<h1 id="product-realization">7. Product Realization</h1>
+<h2 id="product-realization-planning">7.1 Product Realization Planning</h2>
+<h2 id="customer-related-processes">7.2 Customer Related Processes</h2>
+<h3 id="determination-of-requirements-related-to-product">7.2.1 Determination Of Requirements Related To Product</h3>
+<h3 id="review-of-requirements-related-to-product">7.2.2 Review Of Requirements Related To Product</h3>
+<h3 id="customer-communication">7.2.3 Customer Communication</h3>
+<h2 id="design-development">7.3 Design &amp; Development</h2>
+<h3 id="planning-1">7.3.1 Planning</h3>
+<h3 id="input">7.3.2 Input</h3>
+<h3 id="output">7.3.3 Output</h3>
+<h3 id="review">7.3.4 Review</h3>
+<h3 id="verification">7.3.5 Verification</h3>
+<h3 id="validation">7.3.6 Validation</h3>
+<h3 id="control-of-design-development-changes">7.3.7 Control Of Design &amp; Development Changes</h3>
+<h2 id="purchasing">7.4 Purchasing</h2>
+<h3 id="purchasing-process">7.4.1 Purchasing Process</h3>
+<h3 id="purchasing-information">7.4.2 Purchasing Information</h3>
+<h3 id="verification-of-purchased-product">7.4.3 Verification Of Purchased Product</h3>
+<h2 id="production-service-provision">7.5 Production &amp; Service Provision</h2>
+<h3 id="control-of-production-service-provision">7.5.1 Control Of Production &amp; Service Provision</h3>
+<h3 id="validation-of-processes-for-production-service-provision">7.5.2 Validation Of Processes For Production &amp; Service Provision</h3>
+<h3 id="identification-traceability">7.5.3 Identification &amp; Traceability</h3>
+<h3 id="customer-property">7.5.4 Customer Property</h3>
+<h3 id="preservation-of-product">7.5.5 Preservation Of Product</h3>
+<h2 id="control-of-monitoring-measuring-equipment.">7.6 Control Of Monitoring &amp; Measuring Equipment.</h2>
+<h1 id="measurement-analysis-improvement">8. Measurement, Analysis &amp; Improvement</h1>
+<h2 id="general-3">8.1 General</h2>
+<h2 id="monitoring-measurement">8.2 Monitoring &amp; Measurement</h2>
+<h3 id="customer-satisfaction">8.2.1 Customer Satisfaction</h3>
+<h3 id="internal-audit">8.2.2 Internal Audit</h3>
+<p>The quality management system will be checked against the project implementation to test for compliance.</p>
+<h3 id="process-monitoring-measurement">8.2.3 Process Monitoring &amp; Measurement</h3>
+<h3 id="product-monitoring-measurement">8.2.4 Product Monitoring &amp; Measurement</h3>
+<h2 id="control-of-non-conformances">8.3 Control Of Non-conformances</h2>
+<p>When a defect is detected, the problem is recorded as a bug in the issue tracking system.</p>
+<h2 id="analysis-of-data">8.4 Analysis Of Data</h2>
+<h2 id="improvement">8.5 Improvement</h2>
+<h3 id="continual-improvement">8.5.1 Continual Improvement</h3>
+<h3 id="corrective-action">8.5.2 Corrective Action</h3>
+<p>A bug is handled by 1) creating a test that recreates the conditions of the bug (i.e. &quot;regression test&quot;); and 2) altering system code until the error condition has been corrected.</p>
+<h3 id="preventive-action">8.5.3 Preventive Action</h3>
+<p>The project uses a number of techniques to identify problems before they occur. This QMS is the primary action. More specific actions include:</p>
+<ul>
+<li>software version control</li>
+<li>test-driven development with unit tests</li>
+<li>continuous integration</li>
+<li>code reviews</li>
+</ul>
+<h1 id="appendices">Appendices</h1>
+<h2 id="a.1-abbreviations-acronyms">A.1 Abbreviations &amp; Acronyms</h2>
+<h2 id="a.2-sequence-interaction-of-qms-processes">A.2 Sequence &amp; Interaction Of QMS Processes</h2>
+<div class="figure">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAt4AAAJACAAAAACfkz6wAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAAAEgAAABIAEbJaz4AAAAHdElNRQfgBAsKEhZ5ptC3AAAnHElEQVR42u3dW4zk2H0e8K+2d7ZnF1rPnha8HsurScLWzAg7E0QIC4EBPcSBSSTPAUgDevGDgeJjkDykiAB5iwEyL7m8BEXECHIBFBWTOMgCAYw6QSzEgyRAH0OWV4KlTR/LztgYrOE5O5ajncvOMg9kVVf3dM8Uu6uaVf/6fpC2i6zDw3+xv+aweO1VIJLqta4LIFodxpsEY7xJMMabBGO8STDGmwRjvEkwxpsEY7xJMMabBGO8STDGmwRjvEkwxpsEY7xJMMabBGO8STDGmwRjvEkwxpsEY7xJMMabBGO8STDGmwRjvEkwxpsEY7xJMMabBGO8STDGmwRjvEkwxpsEY7xJMMabBHu96wKW62CM1TxNpYe43/WHo9Zkxfuzb37XX1HX5vnXZC2rrSDqV1Y9eexnK+o7/fGTnV7XH5BaErXt/fzx49V1/vjx864/H7UlKt7V06er6/zpUz4jcePIivfnn6+u888/Z7w3jqh4Ex3HeJNgjDcJxniTYIw3CcZ4k2CMNwnGeJNgjDcJth3x1me/ZYwDYK1+ZUvaPLLjne/vxwZAeGzssaG0zAHEJm+m6LpkWibR8U7tweEgdACsds0446YrahhnoYNBCVgXDU2clMAQaZg7wBxNQZtLdLzLTCGYAEBeJi6J4wKIw3+A1PTD2CIOLXTgKYMyQhgPogQIU4xdCsR5mXRdPl1cJciT+98Yzg9j7oU6PKgeBlWFhxWq4KAaDSo8rKqgqkbDyj+o4A8nVVXBr6pKVZU3N3VVVVU1/Mb9J11/PmpL1NU6JynrAWnkA4AzpqxHAtAp4AMKxgei/gA+MNFlMQYMAA/glokIouMd5SOYYlgPJA9h6+0NBZX52gBAGQHKzyMA4UGwB8DXQekz3kKIjneW73t2ouqBQV95rowAqHScKIwAwGQAovgQgNrHCMAoUW7cdeG0JKLjrbLmwuIKs/tDVMAhcNC8nABAVGH2flW/NT8FbS7Re05o2zHeJBjjTYIx3iQY402CMd4kGONNgjHeJBjjTYIx3iQY402CMd4kmLRTqky6eNsreNai43e7/mjUnqh4914Lfv3gs4Wb38H3Fm77+lvBa3z2yMbpSTrt87NHf3TfPVm4+RPsLtz2jb33fu6aqHXBVhD1G9u5+kW8s/gGxx/jSwu3vfKFL17d6frzUVui4t3bfWf32eLPH/kUX1m47WtX3tzlxsnGERVvvL6zWy2+tfUWfnrhtr0eH/u3gWTFG702n2cHb3RdL60W93uTYIw3CcZ4k2CMNwnGeJNgjDcJxniTYIw3CcZ4k2CMNwnGeJNgjDcJxniTYIw3CcZ4k2CMNwnGeJNgjDcJxniTYKLuc9LGh49wH+/h2t2uC6EVEnYp8eIeHQB4gH7XddAqbe3Gyd1jP0imrY33tesAcP1a13XQKm1tvHFnB9i503UVtFLbG++bPaB3s+sqaKW2N967t4Bbi98iljbR9sYbt4HbXddAq7W1OwaBG2/hRtc10GptcbzxftcF0KoJO2p5MMbiH+hpizvE9hDzCNDmkbX2/uyb3/UXb/1mm67N86/JWlZbQdSvrHry2M9W1Hf64ye8gf3GEbXn5Pnjx6vr/PHj511/PmpLVLyrp09X1/nTp7K+pmwFWfH+fPHnRrX2+eeM98YRFW+i4xhvEozxJsEYbxJMfLx7vV7v2P7qcLHp0q4LpyUQH29U1fEHFWsgBVIYZwEAJk7Ko3eN1a5+0XXdtATy4w0Aph/G1iVxXCBFihzIEYe/0Q9ji3gQJQBQvx3nZQLTj7nylqES5Mn9bwxPjkMQBKPgoBoNDg+qh0FVofkfHgYH1WhQ+cNJVVVVVb/tVRWqaFKNgxP9DL9x/0nXn4/aEnXOyakmAJIU8I0pj72hdAr4mOiyGAOo33YAUI4RFV3XTUsgP94AoDJfm+QhbAIoQMHOxur0INgDgPptBwCeDnTXJdMybEe8x4nCyPWV58pIpVm07w+mYz21jxEADPrKc+W0udfixFpaW6IuZ3j6J3//yydPiNXBcvpO/+8//unFr36g9SB+z8mS0k0bSXy8aZsx3iTYlsXbQL/0XZJFfrx7YdjPpwMp8lMbpXP/JTnkxxuTycQcBXcIjdl6enreyfH19vGzUGiDbUG8ATUo69NOAIQoSpRFPRiHzZkoLg5j05ybMjsLhTbeVsQbvkM6mgT1hkmkoaN60E4CNxiPStjhJMjRNFIaD7uumJZiO45aWh/1CSYAEKXOjMJ6UDWnmvg+ohw4fhYKbbztiHfu1yeY1ENREhwN1qeaGKfK4ORZKLTxtiDeIWyU1SeY1COi/uHRYH2qSZQ4Nz55FgptPPHnnCwLzznZRNvx1ZK2FONNgjHeJBjjTYIx3iQY402CSdvvbVqc9XcFz1p0/G7XH43aExXv3mvBrx98tnDzO/jewm1ffyt4jc8e2TiiDut89uiP7rsnCzd/gsUfSvzG3ns/d03UumAriPqN7Vz9It5ZfIPjj/Glhdte+cIXr+50/fmoLVHx7u2+s/ts8eePfIqvLNz2tStv7nLjZOOIijde39mtFt/aegs/vXDbXo+P/dtAsuKNXpvPs9PiqcS0kbjfmwRjvEkwxpsEY7xJMMabBGO8STDGmwRjvEkwxpsEY7xJMMabBBN2zslFfPxR1xVstJvreDkT194zH33cdQWbbD1XDlx7H3n3611XsMHudV3Aqbj2JsEYbxKM8SbBuO19lvX8rnSKtdxlsSa49j7LpuxI2Zg/wy5s7dr7w0e4j3u4dvfsQcwG19l67rJYE1sb70cHAB6gv9Agbait3Ti5e+zHKwZpQ21tvK9dB4Dr1xYapA21tfHGnR1g586Cg7SZtjfeN3tA7+aCg7SZtjfeu7eAW7sLDtJm2t544zZwe+FB2khbu2MQuPEWbiw8SBtpi+ON99sM0iYSFu+DMRa/AfLr+M8LD/YQ8xjP5pEV78+++V1/8dYVdhYfNM+/JmtZbQVRv7LqyWM/W1Hf6Y+f8Ab2G0fUnpPnjx+vrvPHj593/fmoLVHxrp4+XV3nT59KeojclpAV788Xf25Ua59/znhvHFHxJjqO8SbBGG8SjPEmwRhvEozxJsEYbxKM8SbBGG8SbLvirV/xvpn9h0SQG2+X9PuxAcK5cfnxJr0w7JfzI9LZf0gEufFOvYMDFQMaSMPcwTiLIQDAxEkT6slk0oTZJWGdfQ00E9DmW//zvVvcIvL5T7585WjIOZUZpEiBcZ6OYpV54UGiVBaPEEdNI+vDpQ6BVaNUB0DiA0gxztNB4nlY1dnjdDnWP94ffXy+G/xmRWyjCFme9Q+Q7Y3sQwWkI7/IlQ4e1m1CmAxu4LvYHiIDkHgDAPoA2Z7LgrLo+sPTxax/vFs88ubpn/zbL88G8myIPD5E/V3RAxQAnQL+RJfFGAAwAfq+NSVgAQ/QAz2cTlCOETHeG07utnepgcgHFHyNsrkEU2WT4Z+GUTb/hTLJsgE8jbREMEIJ1BN4BuV55ktrZAPW3uc0TlNgBKh0lCg3bkYmCqNkH6N6MISN/EFfeW6QKpUBGIUBMEqUGweJanFZMq0lufH2J/XPQ+AAACoAFQ4ATKZN6stv6q+PQwCYwDvEBP4BAD32Stv1h6CLkRvvi1KxsuOui6CLYbzPEkUX74M6tv7x/ktdF0Cba/3j/YWuC6DNJXfHIBHjTZIx3iQY402CMd4k2DrF22l75uU0vI6GzmGd4p16eX2Wx/R6mTieXWuTouB1NNTWOsXbFra+YqZZSxs7RIbvfKIdkKHE7OIC4zQvpqEFrNNhnQkAmFzBwabAyDjjp5Nf/oWfKcZIYcJJmuVwmY84UMUZp4OYFmv4K3i2+KA530UV1Kl1ijcAIB0GukA69Ms8KwcA3vlnPxUDmIQTIB1EOh9DjRCfNm3vteDXDz5beFZ38L2FB19/K3iNzx7ZOGsXbz1BEKB0QHO29TuAm38zAdTcqHm9N/yfcU8WntUT+AsPvrH33huM98ZZu3gHOjAaQebb4tQ3tXf2tDtXv4h3nmFRf4wvLTx45QtfvLqzUK+0RtYu3lmilI8sUSevUrfhBMM8d6Ozp+3tvrP7bPHnj3yKryw8+NqVN3e59t44vXV+YIzxAfwZfmrxKarn1eIf6H/h5xce7PXW9bF/97DwpdZbUMYJa7f2ntf+Wsdem8+zgzcWH6RNtE77vam9R9882O26hjW21mtvepU//K83/jbjfTbGe6Pd+8vruMW7PrhxssmefHy36xLW25rGO2mOSp5yiD0N07BdZ3J9dO1a1yWstzXdOLHNrXZmp8Aaz/gKAJAlg8u59d/H97peCq/0B28sscabAs+qWbd4mxwu81OTZs3JVeYf4c+nZ1HZFBiVkbmUO5Dc7HpRLGDn+fL6+hgC441qvQTjahJVVVBVVTCpJqiCf/1oElWVX1VRFR1U4+Hy5vVbv/WywU3ww3+xvL4u+PHXc+mt29q7OWlq+jKA/o9HZ1HNnWhFAHDjyTlvfr4t1u2rZaAxPWkq0DAawW/ORiDIJqNz9yzR7o3fXfwEyW20bmvvuZOm6pOrhr/6T348zfQpJ1ptua//t//0i1x/n21NT6kyR9sgrU6pauXEWUD3uvqH/iK7LJ781odf769iaVzy5CuybmvvRhdb2F3tKrnQLovdX7zKzZOzrWm8u/BuRyvv9d+9vrnW7asl0RIx3iQY402CMd4k2PrH+/d/v+sKaGOt/56TP++6ANpc6x/vRZhzPT/4bXxwnsmiM3fKs4x1s/4bJ4soL/HWyC8JD8tYNzLW3vDPcyrK+Y4jv+wenSxjzchYexOdivEmwRhvEozxJsEYbxJMyJ6TOQUGxngBAKP9AABgra9grO/B2EDV/4Ezb9YTNK3rhsG55nl2KU3vs1Jg4c0KCGCc5+E3P0DQvHvUrqatZwcrWy6w8Jo6TIAHGvC8ehyAwgJBoOvZ62VVccnkrb3Lsgh1smeRhCaJHQDdL/ZsERahScNi36Zh3ndA2NwMqGkNAHY/18u8zXFZNr3PSoGNC6RhsW+BMEQeFn3z4HdmEySxSY7do0iX1i6ppBeXC2xcAAhDpGHR/+T38jwsm3EAysKYOLG2qWPpv6dLIS/eQBmNDwYoysn4QOcA0oGXoRxOvBLjiVeU2YEqkAL4TjFrDZumLodfIk0KhNqFFjotXJGmhU2Lcz+IrYzGB4N/PytF7xsA44lXF6AH46h88I7yg6IAkBeT8YHJixRFCD2da4k0NSguHrCTy6UuJgVQjA7Uj35hMgiGet8ARQEA/mQyMIDNUw0A6Zrv4j6VxHgHxV7ieaXvQwUGgNFI7WRojJcFfTe0HpQrdQb8oJy1tn3Y/Z9F4CFQWmtdWq8MUYY2x5t9lMmFavnvs1KCKgCyoO+Gpc6AQZmWg08+cUlelgBM4EEF2hpYXYYoQwDWeAhsgfTijzo8uVyCKgBKnQEOUJ/AJaNmXAkANk2LgTWhQWyARA+7/r2eg8R4Dw+HKik8B8ApABhkgUYeDgbaDVH/25v4Jb7zS5NZ68LPxu5zBD4Cv9SRNgGiEaxBkH0PxpXnDdfwcKiSJ0elAIB2QxSJX6LIfc8rv/rL2UBPJgDgANvMqZ47APgIotLg4rfmemG5TBdEMUz7Fii85o4bk8n0XQdE1g196CJQrWfYPYnx3iuHI98GpoTWEQDfwiEtJhliHXnW1856A4Vm46Ru7Vln8QUAcJEqBlYHyIsoAgBPTSbD8/5u98rhyN+blQIAdRUDBcD4g8B8+zuwXlEAGJhS93UEB8zmXpeEJLp4uk4uFwDAQAFQw5F6B3r6rbbeOPGybKABjKM8hTfON/GR5xLjneV7e2oYZcl+PIwADIs9DAvb74VZvGcHWbHvDbIswtd+UB619vr7w78KeGofkQsiF8G3qfYBRN7+nnehWv7VrJR6XLxnB1kWYZCl/XL4V/73vhmUJYBglMTwEJg9O5t7XdJgGfdVPLlc6pFZhAHSfvA1YPopy9l2vgPQT/0IXhSdewOtQ2t6n5M5i5zqk564u49zHgA4NKs8O4un9Y4Gpz03rZux7pTVpPXOnhde8Vbd+6yUE/05hXv4WW+usbP+sfkBcC7Xh2fN68Xlc3aFJ5fLfEXnPaXqzDLWgbz93gCg6l/f7Jd4lBbv+OB862bsaRsB5155z3o/3utRf+rEoILyXyywtMu5+dzJ5bKcT7jGZMZbmsFmHlTpnsRtb6KGpHgbrfWLO/D0Is9yMKZpavVpby/Ux0vptAR0qi/aj4wyLo2keKdxnvTtybGvOp6se5gekrPW7uentrnwIUOdp0Cet8vVUs8QWKcyLo2obW9/gn4+gi28KPUHqRrawosA2AJDpa1zkTFAVGCkbOFF33nwb9zQL5Ee7WjI4cMWXqRsgUER+YWKbIEBgHr0BYqzxtMK0NqLSgM39KG1Fymtbz7+1Cu8qJwvTRUGbnistCVZkzIuiaS1NwAEBraPMlEahWfrw+m2D7vvdOJs+H0dmGRgCttHmXzyg8Dl8DA7R68+AN5Hmdg+TGwLpM72YWIA9iKH5gEgKkrfR32kvwxc3rwM8aNv/4c+ysTOlwZbBi6fK21p1qSMSyIt3lAoYFz5N8tCRQWMKx+j8LOx0wiysfuRFwV+4LkCxpXPr0e+hj//y/MRFDCu/Od+Ns6i0iAq/GycAXWvFznvIyh1ND3W7ke+rl8WQfa3rv4OjCsfz5fm4Ee+9leQqzUp45IIi7ctvPog+t/w8qh+dRWedRYKFg5XUR+J89RkMtxpBo6H1lOTyfB940weIYmUZ5zJccFD8wAwQBnNHWt39UvPuE8+uVbXOVeaqpvg4udRrWkZl0RUvHVvP8qag+iRjaaH0yOvvz8M4OLQ/4tNy7kD7Z7aB6B7vd7cW5G/H0YYmAj1qwsemq879j3MHWuvX0b+/m9c/+p83y+UtmRrUsblkHlQ/sRBeMB6SM1o/lqcD//gnft4D9funnIYvjlyb5tD4dPe6p9tD8q/XPk//vr/+92fv37trfk/nWPH7F81rzYH5S+1jHUgas/JjHfylQd48OZ/d4/+D4AH6OOUY9TNkXvdHAr3Xuh1eb60fx/v3b/fP/Zs+BPH7C/BmpSxdKI2Tl5qcHyVdvfYj9OnmKz+K9UCZVyGNSlj6bYn3idcuw4A16+xjDUqY+m2Nt64swPs3Om6CpaxUtsb75s9oNfVw/5YxuXY3njv3gJu7XZdBctYqe2NN24Dt7uugWWslswdgwu58RZudF0Dy1itLY433u+6AJaxasLi3epZGDutnibT5iEyLGNNCNv2bvVYmefPWzRuFRWWsSaErb3P91iZRbS7wx7LWA/C1t5E8xhvEozxJsEYbxKM8SbBGG8SjPEmwRhvEozxJsEYbxKM8SbBGG8SbNvj3e2drjua+3S29QmFRne/IFZlu+LdC8P+8Rt45+fsqfV84/CUs1NfPvcQy9bUMZ1tfd5fGr50ZptycuCptivemEwmpvl9mTgpgemjdo3Vq7xP5GQyHsfNa6udRgqkwBDGNffb11a7oxqM1Q66qXHpdQyPOtZHT7N8QV2bWX4Vl0fa+d6vpAZJZhKlsniEOEJ4kHgeMsQBivFKZ2w9kyiVeWUeJLbKM+QZwipWv/JrSmUewshLPK8YJkplHuIAhYe0HCE+/kDLK1fv1S/eRvPi43fb1oGwipuOEx86ajZMXOoQWAM98VOHYIBY/cqveR4Qv1DFxti6eMN3SEd+kSsdPASQZ0FZABhhlY/Y6MGzo3TkF/kon6jB0R1X7cN45Bf5CBgjP0TPNUMj9Ko803WNL/Vum7uT9ODZEYDmwyfeACZrNlbcwHfxBKkX2IHv4gHswyQLSjNtvIm2L97Wh04Bf6LLYgyUY0TFyu9gXQFlalPAh1HH7sWpdAocXbjYDDXlNDXOefasuRHrB+e6I2sFlOlg2rEe6KHxgQmAHowpARR23LwCVL1wXqxiY2xfvHMfKvP1t8KDYA+AZ/wSl3GD9ihWma8NPOtpQGH6jKt6LI4POQBQOq1rXHIdQNNxMArLo6d5Jw9hk6KYNK8AwNOBxkqquCRbFu8QNsowThRGyT5GALJEXdJF394oURghiwMDRPt+8yjWcaJw9Mzh+SGl1T6W8zjiY3UAwbTjUfjl2eWYg77y3N/7aoxo0FeeKyNgnCjPD1ZSxeXYrng39+oPDlD/iwxUxdgrLVDN3lyFCQCMggMAiHyX9Zq8VKjqYqYFVJgbOjzXvF5dB6rmw0/gHU6XSvXiPe8r+AezqTbTdsX7FCpWduUblsHsP+j08e3H6tgGWx/vqItdXmv/xBcptuywDm0XxpsEY7xJMMabBGO8STDGmwRjvEkwxpsEY7xJMMabBJN2UN60uDTwCp616LjVeYUsYz0Ii3erE0iutvmF+m26ZhlrQli8/TZrlXvnuuCFZWwQbnuTYIw3CcZ4k2CMNwnGeJNgjDcJxniTYIw3CcZ4k2CMNwnGeJNgjDcJxniTYIw3CSbshNjFffgI93EP1+6yjPUpY+m2Nt6PDgA8QJ9lrFEZS7e1Gyd3j/1gGWtRxtJtbbyvXQeA69dYxhqVsXRbG2/c2QF27nRdBctYqe2N980e0Gvz0DyWsXm2N967t4Bbu11XwTJWanvjjdvA7a5rYBmrtbU7BoEbb+FG1zWwjNXa4njj/a4LYBmrJizezdOiF7ODD1q0jlrcE4dlrAlh296ladH4+fMWjVtFhWWsCWFrb/jZxfs4VYubUbKMtSFs7U00j/EmwRhvEozxJsEYbxKM8SbBGG8SjPEmwRhvEozxJsEYbxKM8SbBtjXeeuGRy2McAGtfOrsVl1DPwwKwup7XCzO8jAoujfh4u6Tfj188MTQHwgLh3JgQyFdbSpkDmKslv/wS6tnkANIQORCemOElVXBpxMc79Q4OVAxjdbPadEmYA0MY5yOrBwAAGhgiDXMHGKvdCkoZlIB19eOqjbMYXn4JAADPAE4DQ0BjeOytowqM1Q4mTjbkxO4ziI83nEM2Qpzqfmn6YWxzNTIaIYwxSHM1MtolcVykSBGmGLsUiPMyWUElnjIoI9MPY4s4tAgvv4RaUKIcACFSpCFMP05Tl8RxgbkK4rxMEA+i06u48va92tvTFx+vrNqL6FVdV/AqizzrPEV24sWMK7SNIr/3UJUFMr8w+hAWXq9Cr0JoD2EB57t40qvQ8w+AvYfYP3xxubxkFgu3KWzWH6WZX5hR76FCr2pXwrLK6B0Uozjbr3oVelWvigdBWYyc7+IJjirYP0Sv6gdBcOos/uHVX6hf/CaaF7j57vl+vysl7WqdF+TZEHl8GCgEuUkB3wLe7F0LeChnl1YZAB6wqs2CqD+Ar1PAB1Q3JQAAfOPs0TIox4gKc3R5WV2BA4CJLovxaT08e9ascz5YYOXTIfHxLoMAkYFxSvs287XxdJD6UfOup4PUTx7CJlAAfB2U/uqypfw8gsp8Pf9V93JLqAVxswAUAM/4JeoC5ipwAHR6EOyttJBVEx/vcZoCI7gwKMdRojAKEqVm/2aPE6Uy01eeK1WaYZQoN77I3F4hig8xThRG8wVebgl1HXlTgUqBLFE+Bn3luTI6XkGg9o+VunnEx9uf1D8nJgMOgOY/FTABJjgAmg3UCKjq91ABq/lKElVAMJ0/qi5KAFDBr4AKFXCIDG7slbb5gz+cVVA19W028fGeUi98RwrO081yrUEJgIqVXfm/Fx3Zlniv/Q6i7kTRxftYV/L3e9MWY7xJMMabBGO8STDGmwRjvEkwxpsEY7xJMMabBGO8STBpB+VNi+cGXMGzFh23ephMmzLafb5NLKM7wuLd6vSJq23i7bfpulUZO2jxVJvVldFKqzI6JCzefpu1yiKXuW1PGSJx27tz3/9+1xXIxXh37Q9/8pM/7LoGsRjvrv0A+EHXNYjFeHfsyQ+BHz7pugqpGO+OfVQB1UddVyEV492x7z0Hnn+v6yqkYry79egBADx41HUdQjHe3frw2A9aMmGHdTbOtT7u4z1c67oOoRjvbt1d5VFL4sYJCcZ4k2CMNwnGeJNgW/vV8sNHuI97uHa360JohbY23o8OADxAf6mdnuvqmLfxwXlm9ZJzuVd2kU67MtbA1sb7bn0f7aWuvC/zEpaXXC+zJmWsg62N97XrDwBcX+rxlPNdHbP0/d68SGdme79a3tkBdu50XQWt1PbG+2YP6N3sugpaqe2N9+4t4NZu11XQSm1vvHEbuN11DbRaW/vVErjxFm50XQOt1hbHG+93XQCtmrB4Hz06egE7rY6nRNzdtnmEbXuXpkXj5y1uftbuD4fWhLC1N/zs4n2c6vKOc9PyCFt7E81jvEkwxpsEY7xJMMabBGO8STDGmwRjvEkwxpsEY7xJMMabBGO8SbCti7dxR/+fjeu6KFqRrYt3UQJhAYRz8ebZgFJtXbx9A+0bGOUhDXMH4ywA6K7rolXYungHGjoyMAFSjF2KOLQAEtt1XbQK0i5neCUPTk9saQLoA2R7I/tQAYk36LouWoWtW3sjKqF8owMYAB6gAM1tE6G2L95+HiDQSsHXKOvLg4MReCWlSFu3cYLARlDKB0aJcuNm5CgMVNeF0fJtX7xVBWACwD8AgHrIO+y6LFqF7ds4oS3CeJNgjDcJxniTYIw3CcZ4k2CMNwnGeJNgjDcJxniTYIw3CcZ4k2DSTqkyLa6bvIJnLTrmo3U2kLB4R20aX20Tb79V17QehMXbb7OOvYevd10vrRa3vUkwxpsEY7xJMMabBGO8STDGmwRjvEkwxpsEY7xJMMabBGO8STDGmwRjvEkwxpsEE3ZC7OI+fIT7uIdrd7suhFZoa+P96ADAA/S7roNWaWs3Tu4e+0EybW28r10HgOvXuq6DVmlr4407O8DOna6roJXa3njf7AG9m11XQSu1vfHevQXc2u26Clqp7Y03bgO3u66BVmtrdwwCN97Cja5roNXa4njj/a4LoFUTFm/T5unCO/igReuId2HbPMK2vUvTovHz5y0at/rDoTUhbO0NP1tRxy1uzUlrQ9jam2ge402CMd4kGONNgjHeJBjjTYIx3iQY402CMd4kGONNgjHeJBjjTYKJiPeHb+90XQKtJRHxfvSFd7/14ZOFm6fh/n4YHg2HC09JG0bKCbEP/uTbt24veG1ZhhT1ebMmV0EE3XXxtCobEO+P772qxX0Az/H977/1/s7CVyiYRKksHiGOUqQLnCR+5WpTxtt4ZT0tP9+7y+2Pjqz/xsnN1fz209EkyJXGQ2RY1SUQi3mXN1tZmfVfe7/76njfewDs9G7dvtHi4kmdAv5El8V4sfbPnn29fvEBvt71IqFFrX+8F3P9zs12t+RRma+/FR4Ee4DqunhaFRHxvvbnP/k7bacZJwqjZB8jQC2y7U2bSES87/67lhMMgOAAwAQAcNh1/bQqIuLdmtd1AXQ51n/PCdG5Md4kGONNgjHeJBjjTYIx3iQY402CMd4kGONNgjHeJBjjTYJJO+fErOopCoaP1tlAwuIdraxnf3Vd08oIi7fPdSzN4bY3CcZ4k2CMNwnGeJNgjDcJxniTYIw3CcZ4k2CMNwnGeJNgjDcJxniTYIw3CcZ4k2CMNwkm5HzvlV2kc8qseEr55pAR78u8koaX7WyQXtV1BUQrw21vEozxJsEYbxKM8SbBGG8SjPEmwRhvEozxJsEYbxKM8SbBGG8SjPEmwRhvEozxJsEYbxKM8SbBGG8SjPEmwRhvEozxJsEYbxKM8SbBGG8SjPEmwRhvEozxJsEYbxJsegvNf/rg7DaPf/TVV3dkuv4kr/LsD76y7C7/7NOfaT3Np8//Z9dLYotM4/13h2e3efA7C8R77W8L/KNv/9LJUZ53sS7/5UfD1tP89n/pekFsk9kNkLOz2+g/zRbpas3pby39U7giaD/RpOsFsU247X0BqusC6BUWirftukqic2G8SbBj8bZ69uoCXebhdGpd6OJofJmfvnfleKvjbJrmBme/fw4n+tJau5c0Si1gU1ugwFlFWO1mi87CTTu0GtBaazsdcKfPipbllNDOx7tMdB8A4NKL5OkordbqcjY6TE3/1Ac86dKe+ddkc9h+apf5z0d5fDDRev+0T2vrJOYlUOYWKE9OOCs/1qGtF51LC5i8DnGZ6D601mk5HZi+QytxamjnHx2VT1SqAwClu8CXJm2HZQZTeqXvAYDLEQRArg+9snDKFhho4+yg8LPSODsY1JMVVg0L4+wwKg2GqCcCkCGIf7V5H6b0yp2/4AbBtPWg8LP2tWrtR0iATAFehqwfqdJGXj0qATJlU+hhBCDSQ+igWTE0jQbHdoIWWZAXeqJSHZROwUaer6YLM4N1w+nA9B1aogQuqp/ldWpo59feRgEaAAYXefhXGQ2s0X0YDWsAJBahBlzgIZoosw8bWh25YlhqW0ZRYgFrkJfIc1tGXqpj6KSZCADg4bvN+7oPox8Vnle3bnppXaHRQaGhMzX9c/dMarzY1aN0pgqYIhrXf5yetV5z0KpuVA6O7y0fBzBBvegGEWC17rujhZlksyU7fYeWqMxGRb1QTw3t/NrbxxKOzrhSJShUkKHJXek7pes1sTN+6Wfo/Z4XFSoqDPwIad3MdwYOfmRKHWRA72giOFxt3tdBBo0ga1o3vbT+W1TQ0IGvgulfhlOFb5ypR9Xjx4Wtd5MHhQqaP4Om0clFlJcj/2jRDZRShSqbMcZXKJoBXylVtD8ORC8TKfjm7KMP82tvZ2EveBwPKN1oOCyVcWa6wTycDCLA0wZ5rJRzFu8AqL9+OY16jrEaNf+2KIsibSYCAFd615v3Z73OWrdYGx6lMh5m/vykzvreeJJ59SgHAH9Wjob1tnak9fTvp250UmoP/LlFVyg4bzDJ6jFFBEwHCgV34cVLxzngZVvS82vvcQLfR3ixw2p2GMAzfy3aCzzlACCLPTUEBrbvuREG5Z4aqD+att7HoF6H+mnpexYABsWeGzcTAejBG5fN+5HdC7zdY60Xd7QQgtA/+pZtQmCMYQxv/l+BN23oRvXLoz+Lk42aDhAiqhcdAPhh3ageo0dHS9aGp01OF6ITBf8lka1q05+nmbzszdMdDg8nmDSvHzY/D+veDmethsHhwYvTPpw8PJrozF7ba/8pXmUSXM40dKbg8PBlb6/oodvKJRg2m0TTf5Cbn3MbSh5O+8daBXMTndkrEQD/5Zt7q4r3aJFWg5X0SlvkFafJ8ZQqEmy29n7J7uPf7rpIovOZxluFL2vVW10BqzyQ5x3vOz1nN6dSPvDbD89xTGl1H5de0KuW1lX7X/XizBIO933yzunj3fnPaPn0zVc0cC+meSjh2pBNscR4E60bfrUkwRhvEozxJsEYbxLs/wNuJZn37rY/fgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxNi0wNC0xMVQxMDoxODoyMi0wNDowMAv5TiMAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTYtMDQtMTFUMTA6MTg6MjItMDQ6MDB6pPafAAAAIHRFWHRwZGY6SGlSZXNCb3VuZGluZ0JveAA3MzR4NTc2KzArMHHp3bkAAAAUdEVYdHBkZjpWZXJzaW9uAFBERi0xLjMgUwasvwAAAABJRU5ErkJggg==" alt="Agile QMS Process Diagram" />
+<p class="caption">Agile QMS Process Diagram</p>
+</div>
+<h2 id="a.3-relationships-between-iso-standards">A.3 Relationships between ISO standards</h2>
+<div class="figure">
+<img src="data:image/png;base64,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" alt="Compliance Hierarchy Diagram" />
+<p class="caption">Compliance Hierarchy Diagram</p>
+</div>
+<h2 id="a.4-list-of-key-management-system-documents">A.4 List Of Key Management System Documents</h2>
+<h3 id="operational-procedures">Operational Procedures</h3>
+<h3 id="forms-records">Forms &amp; Records</h3>
+<h2 id="a.5-organization-chart">A.5 Organization Chart</h2>
+</body>
+</html>
